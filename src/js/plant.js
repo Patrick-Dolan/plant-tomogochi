@@ -1,7 +1,7 @@
 // This function stores our state.
 
 export const storeState = () => {
-  let currentState = {};
+  let currentState = { health: 100, soil: 5, water: 5, light: 5};
   return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
